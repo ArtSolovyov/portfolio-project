@@ -1,0 +1,17 @@
+{
+  "name": "portfolio-project",
+  "version": "1.0.0",
+  "description": "Портфолио фронтент разработчика",
+  "main": "index.js",
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArtSolovyov/portfolio-project.git"
+  },
+  "author": "AtrhSolo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArtSolovyov/portfolio-project/issues"
+  },
+  "homepage": "https://github.com/ArtSolovyov/portfolio-project#readme"
+}
