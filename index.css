@@ -52,6 +52,31 @@
     justify-content: flex-end;
 }
 
+.container {
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #cecdcd;
+}
+
+.description {
+    width: 100%;
+    text-align: center;
+    background: #b2b2b2;
+}
+
+.change {
+    display: flex;
+}
+
+.outerBox {
+    display: flex;
+    border: black 3px solid;
+    width: 40%;
+}
+
 body {
     background-color: #d5d5d5;
 }
