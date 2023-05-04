@@ -1,4 +1,6 @@
 # Markdown - формат
+## JSON - JavaScript Object Notation
+## API - Application Programing Interface (Программный интерфейс приложения)
 
 ## Мой код работает так:
 ```
