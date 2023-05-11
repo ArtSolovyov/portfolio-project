@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../../index.css">
+    <title>Проект Записная Книга</title>
+</head>
+<body>
+    <div class="header">
+        <div class="menu">
+            <div class="mainPage">На главную</div>
+            <div class="projects">Проекты</div>
+            <div class="contacts">Контакты</div>
+        </div>
+    </div>
+    <div class="container" style="height: 80vh;">
+        <div class="toDoList">
+            <p id="toDoListLabel">Записная книга</p>
+            <div class="notes">
+                <ul class="notesList"></ul>
+            </div>
+            <div class="noteImput">
+                <input type="text" placeholder="Введите название заметки" id="newNoteInput">
+                <button class="createNote">Добавить!</button>
+            </div>
+            <button class="clearAllNotes">Очистить всё</button>
+        </div>
+    </div>
+    <script src="../../index.js"></script>
+    <script src="todolist.js"></script>
+</body>
+</html>
