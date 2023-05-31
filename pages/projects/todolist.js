@@ -8,7 +8,14 @@ let notesArray = [];
 function resetState() {
     const savedData = localStorage.getItem('notes');
     if (savedData) {
-        notesList.innerHTML = savedData;
+        const savedArray = savedData.split("*");
+        notesArray = [...savedArray];
+
+        notesList.innerHTML = savedArray.map(item => {
+            return `<div class="note">
+            <li><input type="checkbox" isChecked="false"><p class="noteValue" style="margin:0">${item}</p></li><button class="noteElementDelete">Удалить</button>
+            </div>`;
+        }).join("");
     }
 }
 
@@ -28,7 +35,7 @@ function addNewNote() {
 
     newNoteInput.value = '';
 
-    localStorage.setItem('notes', notesArray);
+    localStorage.setItem('notes', notesArray.join("*"));
 
 }
 
@@ -45,21 +52,19 @@ function changeNoteState(event) {
     } else {
         event.target.setAttribute("isChecked", "true");
     }
-
-    console.log(event.target)
-
 }
 
 function deleteSelectedElement(event) {
     if (event.target.className === 'noteElementDelete') {
-        console.log(event.target.parentElement);
         const noteValue = event.target.parentElement.querySelector('.noteValue').innerHTML;
-        
-        notesArray.forEach((element, index) => {
-            if (element === noteValue) {
-                notesArray.splice(notesArray[index -1], 1);
+
+        for(let i = 0; i <= notesArray.length; i++) {
+            if (notesArray[i] === noteValue) {
+                notesArray.splice(i, 1);
             }
-        });
+        };
+
+        localStorage.setItem('notes', notesArray.join("*"));
 
         notesList.innerHTML = notesArray.map(item => {
             return `<div class="note">
