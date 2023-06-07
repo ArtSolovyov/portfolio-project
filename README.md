@@ -31,3 +31,8 @@ const data = new Data();
 - Расширяемым
 
 DRY(Сухой) - Dont Repeat Yourself (Не повторяйтесь)
+
+## Тестирование
+- unit
+- интеграционное
+- end2end
